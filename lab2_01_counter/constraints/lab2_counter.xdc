@@ -1,4 +1,6 @@
+
 # Combo II-DLD S75 / xc7s75fgga484-1 / main clock 1 kHz.
+
 set_property PACKAGE_PIN B6 [get_ports {clk}]
 set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
 
@@ -42,5 +44,5 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[6]}]
 set_property PACKAGE_PIN L4 [get_ports {led[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[7]}]
 
-create_clock -name trainer_1khz -period 1000000.000 [get_ports clk]
+create_clock -name trainer_1khz -period 1000000.000 [get_ports {clk}]
 set_false_path -from [get_ports {rst button sw[*]}]

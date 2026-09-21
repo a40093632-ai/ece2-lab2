@@ -1,11 +1,14 @@
 # Combo II-DLD S75 / xc7s75fgga484-1 / main clock 1 kHz.
-# Pin source and array polarity: evidence/board-pin-provenance.json.
+
 set_property PACKAGE_PIN B6 [get_ports {clk}]
 set_property IOSTANDARD LVCMOS33 [get_ports {clk}]
+
 set_property PACKAGE_PIN K4 [get_ports {rst}]
 set_property IOSTANDARD LVCMOS33 [get_ports {rst}]
+
 set_property PACKAGE_PIN N8 [get_ports {button}]
 set_property IOSTANDARD LVCMOS33 [get_ports {button}]
+
 set_property PACKAGE_PIN U4 [get_ports {sw[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
 set_property PACKAGE_PIN V4 [get_ports {sw[1]}]
@@ -22,6 +25,7 @@ set_property PACKAGE_PIN W3 [get_ports {sw[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[6]}]
 set_property PACKAGE_PIN Y1 [get_ports {sw[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {sw[7]}]
+
 set_property PACKAGE_PIN N5 [get_ports {led[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
 set_property PACKAGE_PIN M1 [get_ports {led[1]}]
@@ -38,5 +42,6 @@ set_property PACKAGE_PIN M4 [get_ports {led[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[6]}]
 set_property PACKAGE_PIN L4 [get_ports {led[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {led[7]}]
-create_clock -name trainer_1khz -period 1000000.000 [get_ports clk]
+
+create_clock -name trainer_1khz -period 1000000.000 [get_ports {clk}]
 set_false_path -from [get_ports {rst button sw[*]}]
